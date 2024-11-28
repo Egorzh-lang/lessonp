@@ -1,7 +1,7 @@
 import math
 
 # Задача №1
-R = float(input("Введите радиус круга : "))
+R = int(input("Введите радиус круга : "))
 length_of_circle = 2 * math.pi * R
 area_of_circle = math.pi * R ** 2
 length_of_circle_rounded = round(length_of_circle, 2)
@@ -20,6 +20,6 @@ print(f"После замены: x = {x}, y = {y}")
 
 # Задача №3
 g = 9.81
-L = float(input("Введите длину маятника в метрах: "))
+L = int(input("Введите длину маятника в метрах: "))
 T = 2 * math.pi * math.sqrt(L / g)
 print(f"Период колебания маятника: {T:.2f} секунд")

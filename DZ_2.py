@@ -1,5 +1,5 @@
-num1 = float(input("Введите первое вещественное число: "))
-num2 = float(input("Введите второе вещественное число: "))
+num1 = int(input("Введите первое вещественное число: "))
+num2 = int(input("Введите второе вещественное число: "))
 if num2 == 0:
     print("Ошибка: Деление на ноль невозможно.")
 else:
@@ -8,7 +8,7 @@ else:
 
 
 # Задача №2
-total_amount = float(input("Введите сумму покупки (в у.е.): "))
+total_amount = int(input("Введите сумму покупки (в у.е.): "))
 if total_amount > 20:
     discount = total_amount * 0.35  
     final_price = total_amount - discount  

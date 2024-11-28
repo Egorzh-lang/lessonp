@@ -3,7 +3,7 @@ s = 0
 for i in range(n+1):
     s = i*i*i + s 
 print(s)
-
+###################################
 
 for i in range(1, 10):
     print(f"{i}|", end="")  

@@ -11,7 +11,7 @@ def longest_words(file):
             else:
                 continue
     return maximing
-# print(longest_words(file1))
+####################################################
 
 
 file1 = input('Vvedite nazvanie buducshego faila: ')

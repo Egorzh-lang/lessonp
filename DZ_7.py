@@ -20,3 +20,17 @@ kolvo = int(input('vvedite kol-vo strok: '))
 for i in range(kolvo):
     x = input()
     outputfile.write(f'{x}\n')
+
+################################################################3
+def simple_text_editor():
+    filename = input("Введите имя файла (без расширения): ")
+    filename += ".txt" 
+    with open(filename, 'w', encoding='utf-8') as file:
+        print("Введите строки текста. Для сохранения файла введите пустую строку или строку со спец. символом.")
+        while True:
+            line = input() 
+            if line == "!5" or line == "":
+                print(f"Файл '{filename}' сохранен.")
+                break
+            file.write(line + '\n')  
+simple_text_editor()

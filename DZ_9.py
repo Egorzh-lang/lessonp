@@ -66,27 +66,27 @@ plt.xlabel('x')
 plt.ylabel('y')
 
 
-#Второй график
-plt.subplot(132)  # 1 ряд, 3 столбца, второй график
+
+plt.subplot(132)  
 
 plt.plot(x, f(x,1,0.5), label='α=1, β=0.5')
 plt.plot(x, f(x,1,0.8), label='α=1, β=0.8')
-plt.plot(x, f(x,1,0), 'b--', label='α=1, β=0') #Общий график
-plt.plot(x, f(x,1,-1), 'r--', label='α=1, β=-1') #Общий график
+plt.plot(x, f(x,1,0), 'b--', label='α=1, β=0') 
+plt.plot(x, f(x,1,-1), 'r--', label='α=1, β=-1') 
 plt.legend()
 plt.title('График 2')
 plt.xlabel('x')
 plt.ylabel('y')
 
 
-#Третий график
-plt.subplot(133)  # 1 ряд, 3 столбца, третий график
+
+plt.subplot(133)  
 plt.plot(x, f(x,1,-0.5), label='α=1, β=-0.5')
 plt.plot(x, f(x,1,-0.8), label='α=1, β=-0.8')
 plt.plot(x, f(x,1,-1.5), label='α=1, β=-1.5')
 plt.plot(x, f(x,1,-2.5), label='α=1, β=-2.5')
-plt.plot(x, f(x,1,0), 'b--', label='α=1, β=0') #Общий график
-plt.plot(x, f(x,1,-1), 'r--', label='α=1, β=-1') #Общий график
+plt.plot(x, f(x,1,0), 'b--', label='α=1, β=0') 
+plt.plot(x, f(x,1,-1), 'r--', label='α=1, β=-1') 
 plt.legend()
 plt.title('График 3')
 plt.xlabel('x')

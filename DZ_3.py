@@ -11,4 +11,4 @@ for i in range(1, 10):
         if j*i > 9:
             print(f"  {i * j}", end="")
         else:
-            print(f"   {i * j}", end="")  
+            print(f"   {i+j}", end="")  

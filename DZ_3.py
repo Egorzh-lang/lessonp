@@ -12,5 +12,3 @@ for i in range(1, 10):
             print(f"  {i * j}", end="")
         else:
             print(f"   {i * j}", end="")  
-    print() 
-

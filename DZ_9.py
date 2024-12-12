@@ -45,31 +45,52 @@ plt.show()
 import numpy as np
 import matplotlib.pyplot as plt
 
-a=1
-b=-1
-
-x=np.linspace(-10, 0, 3500)
-
-def f(x):
-    return  ((x**b)-(a**b))/x**b
-
-plt.figure(figsize=(5, 6))
-
-plt.subplot(211)
-plt.plot(x, f(x), color="red")
-plt.grid(True)
-plt.ylim(-10, 10) 
-
-a=0.7
-b=-0.8
-
-plt.figure(figsize=(5, 6))
-plt.subplot(212)
-plt.plot(x, f(x), color="blue")
+def f(x, alpha, beta):
+    return np.sqrt((alpha*x + beta)**2 + 4 - x**2)
 
 
+x = np.linspace(-5, 5, 500) 
+
+
+plt.figure(figsize=(12, 4))
+plt.subplot(131)  
+plt.plot(x, f(x,1,0.5), label='α=1, β=0.5')
+plt.plot(x, f(x,1,-0.5), label='α=1, β=-0.5')
+plt.plot(x, f(x,1,-1.5), label='α=1, β=-1.5')
+plt.plot(x, f(x,1,0), 'b--', label='α=1, β=0') 
+plt.plot(x, f(x,1,-1), 'r--', label='α=1, β=-1') 
 
 plt.legend()
-plt.grid(True)
-plt.ylim(-10, 10) 
+plt.title('График 1')
+plt.xlabel('x')
+plt.ylabel('y')
+
+
+#Второй график
+plt.subplot(132)  # 1 ряд, 3 столбца, второй график
+
+plt.plot(x, f(x,1,0.5), label='α=1, β=0.5')
+plt.plot(x, f(x,1,0.8), label='α=1, β=0.8')
+plt.plot(x, f(x,1,0), 'b--', label='α=1, β=0') #Общий график
+plt.plot(x, f(x,1,-1), 'r--', label='α=1, β=-1') #Общий график
+plt.legend()
+plt.title('График 2')
+plt.xlabel('x')
+plt.ylabel('y')
+
+
+#Третий график
+plt.subplot(133)  # 1 ряд, 3 столбца, третий график
+plt.plot(x, f(x,1,-0.5), label='α=1, β=-0.5')
+plt.plot(x, f(x,1,-0.8), label='α=1, β=-0.8')
+plt.plot(x, f(x,1,-1.5), label='α=1, β=-1.5')
+plt.plot(x, f(x,1,-2.5), label='α=1, β=-2.5')
+plt.plot(x, f(x,1,0), 'b--', label='α=1, β=0') #Общий график
+plt.plot(x, f(x,1,-1), 'r--', label='α=1, β=-1') #Общий график
+plt.legend()
+plt.title('График 3')
+plt.xlabel('x')
+plt.ylabel('y')
+
+plt.tight_layout()
 plt.show()
